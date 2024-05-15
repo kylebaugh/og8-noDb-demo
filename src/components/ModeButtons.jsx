@@ -1,16 +1,16 @@
 import React from 'react'
 
-const ModeButtons = ({isEditing}) => {
+const ModeButtons = ({isEditing, setEditMode, setNormalMode, deleteInvoiceRow}) => {
 
 
   if(isEditing){
     return <td>
-      <button>Save</button>
+      <button onClick={setNormalMode}>Save</button>
     </td>
   }else{
     return <td>
-      <button>Delete</button>
-      <button>Edit</button>
+      <button onClick={deleteInvoiceRow}>Delete</button>
+      <button onClick={setEditMode}>Edit</button>
     </td>
   }
 
