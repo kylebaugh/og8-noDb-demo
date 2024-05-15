@@ -32,7 +32,8 @@ const InvoiceTable = () => {
       id: globalId,
       description: 'New Job Goes here',
       rate: 0,
-      hours: 0
+      hours: 0,
+      isEditing: true
     }
 
     testDataCopy.push(newRow)
@@ -69,7 +70,7 @@ const InvoiceTable = () => {
   }
 
   const rows = testData.map((el) => <TableRow
-    initialIsEditing={false}
+    initialIsEditing={el.isEditing}
     initialDescription={el.description}
     initialRate={el.rate}
     initialHours={el.hours}
